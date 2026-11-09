@@ -66,6 +66,10 @@ Observe + Improve
 
 ![System architecture](docs/architecture.png)
 
+### User interface
+
+![HR Policy Copilot user interface](docs/hr-policy-copilot-ui.png)
+
 ```text
 Employee / HR User
         ↓
