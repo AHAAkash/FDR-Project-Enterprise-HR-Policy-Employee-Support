@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b100f" />
+  <meta name="description" content="Get clear, grounded answers to your workplace policy questions." />
+  <title>{{ app_name }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Main navigation">
+      <a class="brand" href="/" aria-label="PeopleDesk home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none"><path d="M16 4.5 27.5 11v10L16 27.5 4.5 21V11L16 4.5Z" stroke="currentColor" stroke-width="1.7"/><path d="m11 18 3.2-7 2.2 4.2 2-2.7 2.8 5.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="brand-name">people<span>desk</span></span>
+      </a>
+
+      <div class="sidebar-content">
+        <p class="eyebrow nav-label">WORKSPACE</p>
+        <button id="newChat" class="new-chat-button" type="button">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12M4 10h12" /></svg>
+          <span>New conversation</span>
+          <span class="shortcut">⌘ K</span>
+        </button>
+
+        <div class="sidebar-section">
+          <p class="eyebrow">YOUR ASSISTANT</p>
+          <div class="assistant-card">
+            <div class="assistant-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3.5 14.5 9.5 20.5 12l-6 2.5-2.5 6-2.5-6-6-2.5 6-2.5 2.5-6Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="m19 3 .8 2.2L22 6l-2.2.8L19 9l-.8-2.2L16 6l2.2-.8L19 3Z" fill="currentColor"/></svg>
+            </div>
+            <div class="assistant-card-copy">
+              <strong>HR Policy Copilot</strong>
+              <span><i class="online-dot"></i> Ready to help</span>
+            </div>
+            <svg class="chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5" /></svg>
+          </div>
+        </div>
+
+        <div class="sidebar-note">
+          <div class="note-icon">
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2.5 17 5v4.7c0 3.7-2.7 6.3-7 7.8-4.3-1.5-7-4.1-7-7.8V5l7-2.5Z" stroke="currentColor" stroke-width="1.4"/><path d="m7 9.7 2 2 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <strong>Grounded in your policies</strong>
+            <p>Company knowledge comes first. Web sources are clearly labeled.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-footer">
+        <button id="openUpload" class="upload-nav-button" type="button">
+          <span class="upload-nav-icon">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 13V3m0 0L6.5 6.5M10 3l3.5 3.5M4 11.5v3A1.5 1.5 0 0 0 5.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-3" /></svg>
+          </span>
+          <span><strong>Add a knowledge document</strong><small>PDF, DOCX, Markdown or TXT</small></span>
+          <svg class="chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5" /></svg>
+        </button>
+        <div class="profile-row">
+          <div class="profile-avatar">HR</div>
+          <div class="profile-copy"><strong>People team</strong><span>Support workspace</span></div>
+          <span class="profile-menu" aria-hidden="true">···</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <div class="breadcrumb"><span>Workspace</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5" /></svg><strong>HR Policy Copilot</strong></div>
+        <div class="topbar-actions">
+          <span class="secure-label"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3.5" y="7" width="9" height="7" rx="1.5"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" /></svg>Private workspace</span>
+          <button class="icon-button mobile-upload" type="button" aria-label="Add HR document" onclick="document.getElementById('openUpload').click()">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 13V3m0 0L6.5 6.5M10 3l3.5 3.5M4 11.5v3A1.5 1.5 0 0 0 5.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-3" /></svg>
+          </button>
+        </div>
+      </header>
+
+      <div class="content-layout">
+        <section class="conversation-column" aria-label="HR policy assistant">
+          <div class="conversation-heading">
+            <div class="heading-kicker"><span class="sparkle">✳</span> YOUR PEOPLE TEAM, IN YOUR CORNER</div>
+            <h1>Work questions,<br /><span>clear answers.</span></h1>
+            <p>Ask about your policies, benefits, or how to get things done.<br class="desktop-break" /> I’ll help you find the right information.</p>
+          </div>
+
+          <section id="chat" class="chat-area" aria-live="polite" aria-label="Conversation">
+            <div class="message assistant welcome-message">
+              <div class="avatar assistant-avatar" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 3.5 14.5 9.5 20.5 12l-6 2.5-2.5 6-2.5-6-6-2.5 6-2.5 2.5-6Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="bubble welcome-bubble">
+                <div class="welcome-title">Hi there! <span class="wave">✦</span></div>
+                <p>I can help you navigate workplace policies and everyday HR questions. What would you like to know?</p>
+                <span class="message-time">HR POLICY COPILOT <i></i> JUST NOW</span>
+              </div>
+            </div>
+          </section>
+
+          <div class="composer-area">
+            <div class="suggestions-label"><span>NOT SURE WHERE TO START?</span><span class="suggestion-line"></span></div>
+            <div class="examples" aria-label="Suggested questions">
+              <button class="example" type="button"><span class="suggestion-icon leave-icon">↗</span>How much annual leave do I get?</button>
+              <button class="example" type="button"><span class="suggestion-icon work-icon">⌂</span>What’s our remote work policy?</button>
+              <button class="example" type="button"><span class="suggestion-icon pay-icon">$</span>Where can I find payroll info?</button>
+            </div>
+            <form id="chatForm" class="composer">
+              <div class="composer-topline">
+                <textarea id="question" rows="1" maxlength="3000" placeholder="Ask anything about work..." aria-label="Your question" required></textarea>
+                <button type="submit" class="send-btn" aria-label="Send message">
+                  <span>Send</span>
+                  <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m0 0-4-4m4 4-4 4" /></svg>
+                </button>
+              </div>
+              <div class="composer-footer">
+                <span><kbd>↵</kbd> to send <span class="footer-divider">·</span> <kbd>Shift + ↵</kbd> for a new line</span>
+                <span class="privacy-hint"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3.5" y="7" width="9" height="7" rx="1.5"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" /></svg> Company knowledge checked first</span>
+              </div>
+            </form>
+            <p class="disclaimer">AI can make mistakes. Please confirm important decisions with your HR team.</p>
+          </div>
+        </section>
+
+        <aside class="insights-panel" aria-label="Assistant activity">
+          <div class="panel-heading">
+            <div>
+              <span class="eyebrow">UNDER THE HOOD</span>
+              <h2>How I find answers</h2>
+            </div>
+            <span class="live-pill"><i></i> LIVE</span>
+          </div>
+          <p class="panel-description">Every answer follows a thoughtful path to find you the right information.</p>
+
+          <div class="journey-card">
+            <div class="journey-heading"><span class="journey-orb"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2.5 12 7l4.5 2-4.5 2-2 4.5L8 11l-4.5-2L8 7l2-4.5Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg></span><strong>Answer journey</strong></div>
+            <div id="trace" class="trace-list" aria-live="polite">
+              <div class="trace-placeholder"><span class="placeholder-icon">01</span><span>Ask a question to see how I find an answer.</span></div>
+            </div>
+            <div class="journey-caption"><span class="journey-caption-dot"></span> Your company knowledge comes first</div>
+          </div>
+
+          <div class="source-card">
+            <div class="source-card-top"><span class="source-icon"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5.5 3.5h6l3 3v10h-9v-13Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/><path d="M11.5 3.5v3h3m-6 4h4m-4 2.5h4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></span><span class="eyebrow">ANSWER SOURCE</span></div>
+            <strong id="sourceUsed" class="source-value">Waiting for your question</strong>
+            <span id="sourceDescription" class="source-description">Your answer source will appear here.</span>
+          </div>
+
+          <div class="trust-note">
+            <div class="trust-mark">✓</div>
+            <p><strong>Thoughtful by design</strong><br />If I can’t find a reliable answer, I’ll say so rather than guess.</p>
+          </div>
+
+          <div class="panel-footer"><span>MADE FOR BETTER WORKDAYS</span><span class="footer-sparkle">✳</span></div>
+        </aside>
+      </div>
+    </main>
+  </div>
+
+  <div id="uploadModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="uploadTitle">
+    <div class="modal-backdrop" data-close-upload></div>
+    <section class="modal-card">
+      <div class="modal-accent"></div>
+      <div class="modal-head">
+        <span class="modal-icon"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 13V3m0 0L6.5 6.5M10 3l3.5 3.5M4 11.5v3A1.5 1.5 0 0 0 5.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-3" /></svg></span>
+        <button id="closeUpload" class="modal-close" type="button" aria-label="Close upload dialog">×</button>
+      </div>
+      <span class="eyebrow">GROW YOUR KNOWLEDGE BASE</span>
+      <h2 id="uploadTitle">Add a document</h2>
+      <p class="modal-description">Share an HR resource with the copilot. Your document will be processed and indexed for future answers.</p>
+      <label class="field-label" for="adminKey">Admin key</label>
+      <input id="adminKey" class="modal-input" type="password" placeholder="Enter your admin key" autocomplete="current-password" />
+      <label class="drop-zone" for="fileInput">
+        <span class="drop-icon"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5.5 3.5h6l3 3v10h-9v-13Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/><path d="M11.5 3.5v3h3" stroke="currentColor" stroke-width="1.3"/></svg></span>
+        <strong id="fileName">Choose a file to upload</strong>
+        <span>PDF, DOCX, Markdown or TXT</span>
+        <input id="fileInput" type="file" accept=".pdf,.txt,.md,.docx" />
+      </label>
+      <button id="uploadBtn" class="send-btn upload-submit" type="button"><span>Index document</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m0 0-4-4m4 4-4 4" /></svg></button>
+      <p id="uploadStatus" class="upload-status" role="status" aria-live="polite"></p>
+      <p class="modal-footnote"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3.5" y="7" width="9" height="7" rx="1.5"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" /></svg> Documents are only used to answer workplace questions.</p>
+    </section>
+  </div>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
